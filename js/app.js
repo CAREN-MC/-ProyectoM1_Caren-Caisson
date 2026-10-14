@@ -1,6 +1,8 @@
 const boton = document.getElementById("generarBtn");
 const selector = document.getElementById("cantidad");
 const paleta = document.getElementById("paleta");
+const formato = document.getElementById("formato");
+
 
 function aHex(numero) {
     let texto = numero.toString(16);
@@ -28,6 +30,7 @@ function hslAHex(h, s, l) {
 
 boton.addEventListener("click", function () {
     const cantidad = Number(selector.value);
+    const formatoSeleccionado = formato.value;
 
     paleta.innerHTML = "";
 
@@ -37,7 +40,15 @@ boton.addEventListener("click", function () {
         const luminosidad = Math.floor(Math.random() * 41) + 40;
         const matiz = Math.floor(Math.random() * 361);
         const hex = hslAHex(matiz, 80, luminosidad);
-        caja.textContent = hex;
+        const hsl = `hsl(${matiz}, 80%, ${luminosidad}%)`;
+
+        if (formatoSeleccionado === "hsl") {
+            caja.textContent = hsl;
+        }
+        else {
+            caja.textContent = hex;
+        }
+
         caja.style.backgroundColor = hex;
         paleta.appendChild(caja);
     }
