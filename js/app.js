@@ -1,17 +1,17 @@
 const boton = document.getElementById("generarBtn");
-const selector= document.getElementById("cantidad");
+const selector = document.getElementById("cantidad");
 const paleta = document.getElementById("paleta");
 
-    function aHex(numero)  {
-        let texto = numero.toString(16);
+function aHex(numero) {
+    let texto = numero.toString(16);
 
-        if (texto.length < 2)  {
-            texto= "0" + texto;
-        } 
-        return texto; 
+    if (texto.length < 2) {
+        texto = "0" + texto;
     }
-    
-    function hslAHex(h, s, l) {
+    return texto;
+}
+
+function hslAHex(h, s, l) {
     s = s / 100;
     l = l / 100;
     const a = s * Math.min(l, 1 - l);
@@ -29,7 +29,7 @@ const paleta = document.getElementById("paleta");
 boton.addEventListener("click", function () {
     const cantidad = Number(selector.value);
 
-paleta.innerHTML ="";
+    paleta.innerHTML = "";
 
     for (let i = 0; i < cantidad; i++) {
         const caja = document.createElement("div");
@@ -40,5 +40,5 @@ paleta.innerHTML ="";
         caja.textContent = hex;
         caja.style.backgroundColor = hex;
         paleta.appendChild(caja);
-        }
+    }
 });
