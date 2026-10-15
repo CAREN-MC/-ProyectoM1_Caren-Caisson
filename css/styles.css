@@ -69,6 +69,7 @@
     border: none;
     cursor: pointer;
     border-radius: 6px;
+    transition:background-color 0.8s ease, transform 0.8s ease, box-shadow 0.8s ease, color 0.8s ease;
   }
 
   button:hover {
@@ -76,6 +77,7 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(212, 154, 27, 0.3);
     color: aliceblue;
+  
   }
 
   footer {
