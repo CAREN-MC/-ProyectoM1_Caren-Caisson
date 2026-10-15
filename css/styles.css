@@ -60,17 +60,17 @@
     font-size: 1rem;
   }
 
-  button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: #EB895B;
-    color: black;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-    transition:background-color 0.8s ease, transform 0.8s ease, box-shadow 0.8s ease, color 0.8s ease;
-  }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #EB895B;
+      color: black;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      transition:background-color 0.8s ease, transform 0.8s ease, box-shadow 0.8s ease, color 0.8s ease;
+    }
 
   button:hover {
     background-color: #753c16;
